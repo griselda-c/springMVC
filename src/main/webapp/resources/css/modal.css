@@ -1,0 +1,33 @@
+@CHARSET "ISO-8859-1";
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+#modal{
+	position:fixed;
+	width:500px;
+	height: 500px;
+	top: 0px;
+	left: 0px;
+	margin: 0 auto;
+	margin-top: 50px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	border: 1px solid #4e4d4d;
+	border-radius: 20px;
+	display:none; 
+}
+
+
+
+span.ui-icon.ui-con-alert, span.icon-attention{
+	 float: left;
+	 margin: 12px 12px 20px 0;
+}
+
+#dialog-confirm{
+	display: none;
+}

@@ -1,0 +1,76 @@
+@CHARSET "ISO-8859-1";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#menuInicial {
+	background: #1883ba;
+	height: 50px;
+	/* max-width: 2000px;
+	width: 100%;  */
+}
+
+nav ul {
+	list-style: none; /*saca los puntitos */
+	background: #1883ba;
+	display: flex; /*para que esten horizontal */
+	/*justify-content: flex-end;*/
+	/*margin: 0;
+	padding: 0; */
+}
+
+nav ul ul{ /*sub menu */
+	display: none;
+	z-index: 100; /*para que no lo tape ningun elemento */
+}
+
+nav a {
+	text-decoration: none;
+	display: block;
+	padding: 15px 20px;
+	color: #fff;
+	/* float: left; color : #fff;
+	font-weight: 600;
+	font-family: verdana;
+	cursor: pointer; */
+	
+}
+
+nav li:hover {
+	background: rgba(255, 255, 255, 0.3);
+}
+
+nav a span{
+	padding: 10px;
+}
+
+nav ul li:hover ul{
+	display:block;
+	position: absolute;
+}
+
+#imagen {
+	overflow: hidden;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	max-width: 2000px;
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#imagen img {
+	height: 900px;
+	width: 100%;
+}
+
+@media screen and (max-width: 639px) {
+	
+	#imagen img{
+	height:400px;
+	}
+}
