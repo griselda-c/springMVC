@@ -39,13 +39,13 @@
 		<h2>${titulo}</h2>
 
 		<form:label path="nomCli">Nombre </form:label>
-		<form:input path="nomCli" name="nomCli" />
+		<form:input path="nomCli" name="nomCli"  required="required"/>
 
-		<form:label path="localidad">Localidad</form:label>
-		<form:input path="localidad" name="localidad" />
+		<form:label path="localidad" >Localidad</form:label>
+		<form:input path="localidad" name="localidad"  required="required"/>
 
 		<form:label path="compraMaxima">Compra Max </form:label>
-		<form:input path="compraMaxima" name="compraMaxima" />
+		<form:input path="compraMaxima" name="compraMaxima" required="required" />
 		<div class="ui-widget">
 			<form:label path="codCliContacto.nomCli">Cliente Contacto </form:label>
 			<form:input path="codCliContacto.nomCli" id="buscadorCliente"

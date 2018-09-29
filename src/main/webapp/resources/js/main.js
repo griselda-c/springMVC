@@ -172,7 +172,7 @@ function mostrarOcultar() {
 	});
 
 }
-
+/*
 function eliminarProducto(nombre) {
 	$.ajax({
 		url : 'http://localhost:8080/mvc/eliminarProducto.html',
@@ -195,6 +195,41 @@ function eliminarProducto(nombre) {
 
 		}
 	});
+}*/
+
+
+function eliminarProducto(nombre){
+	 $('#dialog-confirm').dialog({
+		  resizable:false,
+	  	  height:"auto",
+	  	  width: 400,
+	  	  modal:true,
+	  	  buttons:{
+	  		  "Eliminar producto": function (){
+	  		    $(this).dialog("close");
+	  		  $.ajax({
+	  			url : 'http://localhost:8080/mvc/eliminarProducto.html',
+	  			type : 'POST',
+	  			data : {
+	  				nombreProducto : nombre
+	  			},
+	  			error : function(e) {
+	  				console.log("ERROR: ", e);
+	  				alert('Error ' + e);
+	  			},
+	  			success : function(response) {
+	  				location.href= 'http://localhost:8080/mvc/productos.html'
+
+	  			}
+	  		});
+
+	  		  },
+	  		  Cancel:function(){
+	  			  $(this).dialog("close");
+	  		  }
+	  	  },
+		  
+	  });
 }
 
 function listarProductos() {

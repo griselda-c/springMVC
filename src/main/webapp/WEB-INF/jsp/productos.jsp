@@ -126,6 +126,14 @@
 				</c:if>
 			</tbody>
 		</table>
+		
+		<div id="dialog-confirm" title="¿Esta seguro de borrar el producto?">
+			<p>
+				<span class="ui-icon ui-icon-alert"></span>
+				El producto se borrará permanentemente y no se podrá recuperar.
+				¿Esta usted seguro de borrarlo?
+			</p>
+		</div>
 
 		<div id="tfoot">
 			<ul class="paginacion">
@@ -135,6 +143,8 @@
 		</div>
 
 	</div>
+	
+	<input id="totalResultados" type="hidden" value='${totalResultados}' />
 
 </body>
 </html>

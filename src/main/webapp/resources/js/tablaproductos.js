@@ -2,7 +2,7 @@
  * 
  */
 
-function listado() {
+/*function listado() {
 	$.ajax({
 		url : "http://localhost:8080/mvc/listadoProductos.json",
 		type : "GET",
@@ -25,7 +25,7 @@ function listado() {
 		}
 	});
 
-}
+}*/
 
 function display(response) {
 	//El tr tiene clase ocultar para hacer el efecto del nav

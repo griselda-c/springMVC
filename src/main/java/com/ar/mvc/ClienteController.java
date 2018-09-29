@@ -66,16 +66,18 @@ public class ClienteController {
 	@RequestMapping(value = "/clientes")
 	public @ResponseBody ModelAndView clientes() {
 		ModelAndView model = new ModelAndView("clientesTable");
-		model.addObject("clientes", clienteService.listClientes());
+		List<Cliente> clientes = clienteService.listClientes();
+		model.addObject("clientes", clientes);
+		model.addObject("totalResultados", clientes.size());
 		return model;
 	}
 	
 	@RequestMapping(value = "/registrarCliente", method = { RequestMethod.GET, RequestMethod.POST })
-	public @ResponseBody void registrarCliente(@ModelAttribute Cliente cliente) {
+	public @ResponseBody ModelAndView registrarCliente(@ModelAttribute Cliente cliente) {
 		Cliente contacto = clienteService.getClienteByName(cliente.getCodCliContacto().getNomCli());
 		cliente.setCodCliContacto(contacto);
 		clienteService.addCliente(cliente);
-		clientes();
+		return clientes();
 	}
 
 

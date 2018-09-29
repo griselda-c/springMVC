@@ -150,7 +150,7 @@
 		<li class="page-item"><a class="page-link" href="#">Next</a></li>
 	</ul>
 	</nav>--%>
-	<%-- <input id="totalResultados" type="hidden" value='${totalResultados}' />
+	<input id="totalResultados" type="hidden" value='${totalResultados}' />
 	
-	<div id="probando"></div> --%>
+	<%--<div id="probando"></div> --%>
 </body>

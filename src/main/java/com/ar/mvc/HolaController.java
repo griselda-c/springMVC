@@ -137,7 +137,9 @@ public class HolaController {
 
 	@RequestMapping(value = "/productos")
 	public @ResponseBody ModelAndView listarProductos(ModelMap model) {
-		model.put("listado", productoService.listProductos());
+		List<Producto>productos = productoService.listProductos();
+		model.put("listado", productos);
+		model.put("totalResultados", productos.size());
 		return new ModelAndView("productos", model);
 	}
 	

@@ -133,7 +133,7 @@ function navegarSig_Anterior_Extremos() {
 
 }*/
 
-function listado() {
+/*function listado() {
 	console.log("listado");
 	$.ajax({
 		url : "http://localhost:8080/mvc/listado.json",
@@ -147,11 +147,11 @@ function listado() {
 			// paginacion.listado = resp;
 			paginacion.length = resp.length;
 			paginacion.nroPag = Math.ceil(resp.length / $('#selector').val());
-			/*
+			
 			 * mostrarCantidad(paginacion.listado); ordenar(resp);
-			 */
+			 
 			buscador();
-			/*display(resp);*/
+			display(resp);
 			tablaFunciones();
 			onchangeSelector();
 			ordenar();
@@ -160,6 +160,20 @@ function listado() {
 		}
 	});
 
+}*/
+
+
+function listado(){
+	var total = $('#totalResultados').val();
+	console.log(total);
+	paginacion.length = total;
+	paginacion.nroPag = Math.ceil(total/$('#selector').val());
+	buscador();
+	tablaFunciones();
+	onchangeSelector();
+	ordenar();
+	calcularNroPag();
+	build_nav(1)
 }
 
 
@@ -176,9 +190,13 @@ function onchangeSelector() {
 	$('#selector').data('before', $('#selector').val());
 	$('#selector').change(function() {
 		ocultarContenido($('#selector').data('before'));
-		mostrarCantidad();
 		$('#selector').data('before', $('#selector').val());
 		calcularNroPag();
+		if(paginacion.nroPag < paginacion.pagina){// si se cambia el selector con pagina 6 pero con el cambio serán 2 paginas
+                                                  //se mostrara la pagina 2
+			paginacion.pagina = paginacion.nroPag;
+		}
+		mostrarCantidad();
 		build_nav(1);
 	});
 }
