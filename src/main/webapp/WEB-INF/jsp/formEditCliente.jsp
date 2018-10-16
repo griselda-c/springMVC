@@ -55,10 +55,10 @@
 				<form:form method="POST" id="editClienteForm" modelAttribute="clienteEdit">
 					<div class="form-group">
 						<form:label path="nomCli" class="form-control-label">Nombre </form:label>
-						<form:input path="nomCli" name="nomCli"  class="form-control"/>
+						<form:input path="nomCli" name="nomCli"  class="form-control" required="required"/>
 
 						<form:label path="localidad" class="form-control-label">Localidad</form:label>
-						<form:input path="localidad" name="localidad" class="form-control"/>
+						<form:input path="localidad" name="localidad" class="form-control" required="required"/>
 
 						<form:label path="compraMaxima" class="form-control-label">Compra Max </form:label>
 						<form:input path="compraMaxima" name="compraMaxima" class="form-control"/>
@@ -71,7 +71,7 @@
 
 
 						<div class="modal-footer">
-							<a href="productos.html"><button type="button"
+							<a href="clientes.html"><button type="button"
 									class="btn btn-secondary">Cancelar</button></a> <input
 								type="submit" value="Editar" class="btn btn-primary" /></input>
 						</div>
