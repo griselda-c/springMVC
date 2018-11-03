@@ -11,18 +11,13 @@
 <link href="${pageContext.request.contextPath}/resources/css/fontello.css"
 	rel="stylesheet">
 
-<title>Insert title here</title>
+<title></title>
 </head>
 <body>
 
 	<div id="menuInicial">
 		<nav>
 			<ul>
-				<li><a title="producto" href="irRegistrarProducto.html">Registrar
-						Producto</a></li>
-				<li><a title="cliente" href="agregarCliente.html"> Registrar
-						Cliente</a></li>
-
 				<li><a href="#">Clientes<span class="icon-angle-down"></span></a>
 					<ul>
 						<li><a href="agregarCliente.html">Registrar cliente</a></li>

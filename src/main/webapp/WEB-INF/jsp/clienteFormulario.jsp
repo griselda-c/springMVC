@@ -21,8 +21,6 @@
 	href='<c:url value="/resources/css/formularioCliente.css"></c:url>'
 	rel="stylesheet" />
 
-<link href='<c:url value="/resources/css/table.css"></c:url>'
-	rel="stylesheet" />
 <link href='<c:url value="/resources/css/modal.css"></c:url>'
 	rel="stylesheet" />
 
@@ -39,22 +37,29 @@
 		<h2>${titulo}</h2>
 
 		<form:label path="nomCli">Nombre </form:label>
-		<form:input path="nomCli" name="nomCli"  required="required"/>
+		<form:input path="nomCli" name="nomCli" required="required" />
 
-		<form:label path="localidad" >Localidad</form:label>
-		<form:input path="localidad" name="localidad"  required="required"/>
+		<form:label path="localidad">Localidad</form:label>
+		<form:input path="localidad" name="localidad" required="required" />
 
 		<form:label path="compraMaxima">Compra Max </form:label>
-		<form:input path="compraMaxima" name="compraMaxima" required="required" />
+		<form:input path="compraMaxima" name="compraMaxima"
+			required="required" />
 		<div class="ui-widget">
 			<form:label path="codCliContacto.nomCli">Cliente Contacto </form:label>
 			<form:input path="codCliContacto.nomCli" id="buscadorCliente"
 				class="nomCli" />
 		</div>
 
-		<input type="submit" value="Agregar Cliente" id="btn_agregar" />
+		<div id="form_btn">
+			<a href="clientes.html"><button type="button" class="btn"
+					id="btn_cancelar">Cancelar</button></a> <input type="submit"
+				value="Agregar Cliente" class="btn" id="btn_agregar" />
+
+		</div>
+
 	</form:form>
-	
+
 
 
 </body>

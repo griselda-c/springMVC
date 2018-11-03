@@ -12,7 +12,7 @@ body {
 
 form {
 	width: 450px;
-	margin: 0 auto;
+	margin: 0 auto; /*centrado de manera horizontal */
 	padding: 10px 20px;
 	box-sizing: border-box;
 	margin-top: 50px;
@@ -33,20 +33,29 @@ label {
 	font-size: 17px;
 }
 
-#btn_agregar {
+.btn {
 	background-color: #1883ba;
 	text-decoration: none;
 	border-radius: 20px;
 	padding: 10px;
 	font-weight: 600;
 	color: white;
-	width: 35%;
+	width: 45%;
+	font-size: 17px;
 	/*margin:30px 30px 30px 250px;*/
-	margin-left: 65%
 }
 
-#btn_agregar:hover {
+.btn {
 	cursor: pointer;
+}
+
+form#btn_agregar {
+	/*margin-left: 65%*/
+	float: right;
+}
+
+form#btn_cancelar {
+	float: left;
 }
 
 h2 {
@@ -60,12 +69,9 @@ h2 {
 	form {
 		width: 100%;
 	}
-	
-	#btn_agregar {
-		width: 70%;
-		margin-left: 35%;
+	.btn {
+		width: 45%;
+		font-size: 11px;
 	}
 }
-
-
 }
