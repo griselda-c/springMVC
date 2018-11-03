@@ -4,9 +4,9 @@
 
 $(document).ready(function() {
 
-	var total = $("#totalResultados").val();
+	/*var total = $("#totalResultados").val();
 	var xpag = $('#selector').val();
-	var nroPag = Math.ceil(total / xpag);
+	var nroPag = Math.ceil(total / xpag);*/
 
 	listado();
 });
@@ -25,10 +25,6 @@ var paginacion = {
 
 function build_nav(desde) {
 	var i;
-	//paginacion.nroPag = Math.ceil(length / $('#selector').val()); // cambia si
-																	// cambia el
-																	// selector
-																	// val
 	var nroPag = paginacion.nroPag;
 	var pagina = paginacion.pagina; // pagina actual
 	var hasta = nroPag;
@@ -42,8 +38,9 @@ function build_nav(desde) {
 
 	$("ul.paginacion")
 			.prepend("<li><a id='primero'>" + "Primero" + "</a></li>");
+	console.log("Soy YO");
 	$("ul.paginacion").prepend(
-			"<li><a id='anterior' data-page=" + "anterior" + ">" + "Anterior"
+			"<li><a id='anterior' data-page=" + "anterior" + ">" + "&laquo"
 					+ "</a></li>");
 	
 	if(desde !=1){
@@ -72,7 +69,7 @@ function build_nav(desde) {
 	
 	$("ul.paginacion").prepend(
 			"<li><a data-page=" + "siguiente" + " id='siguiente'>"
-					+ "Siguiente" + "</a></li>");
+					+ "&raquo" + "</a></li>");
 	$("ul.paginacion").prepend(
 			"<li><a data-page=" + paginacion.nroPag + " id='ultimo'>" + "\u00DAltimo" + "</a></li>");
 
@@ -165,7 +162,6 @@ function navegarSig_Anterior_Extremos() {
 
 function listado(){
 	var total = $('#totalResultados').val();
-	console.log(total);
 	paginacion.length = total;
 	paginacion.nroPag = Math.ceil(total/$('#selector').val());
 	buscador();

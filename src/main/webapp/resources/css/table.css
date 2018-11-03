@@ -176,4 +176,7 @@ ul.paginacion li a {
 	table td:last-child {
 		border-bottom: 0;
 	}
+	
+	#primero, #ultimo,#agregar,#volver{
+	display:none;}
 }
