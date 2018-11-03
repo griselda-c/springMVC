@@ -27,6 +27,7 @@
 					<ul>
 						<li><a href="agregarCliente.html">Registrar cliente</a></li>
 						<li><a href="clientes.html">Listado de clientes</a>
+						<li><a href="clientesAngularjs.html">Listado de clientes (angularjs)</a>
 						<li><a href="#">Exportar clientes</a></li>
 						<li><a href="#">Importar clientes</a></li>
 					</ul>

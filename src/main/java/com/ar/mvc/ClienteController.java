@@ -243,5 +243,15 @@ public class ClienteController {
 			System.out.println("Error de entrada/salida");
 		}
 	}
-
+	
+	
+	/************************************ANGULAR JS**********************************************/
+	@RequestMapping(value = "/clientesAngularjs")
+	public @ResponseBody ModelAndView clientesAngular() {
+		ModelAndView model = new ModelAndView("clientesTableAngularjs");
+		List<Cliente> clientes = clienteService.listClientes();
+		model.addObject("clientes", clientes);
+		model.addObject("totalResultados", clientes.size());
+		return model;
+	}
 }
